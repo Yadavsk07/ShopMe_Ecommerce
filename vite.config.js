@@ -2,19 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/ShopMe_Ecommerce/',
+  base: './',
   plugins: [react()],
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    minify: 'terser',
-    sourcemap: false,
-    manifest: true,
-    rollupOptions: {
-      input: './index.html',
-      output: {
-        manualChunks: undefined
-      }
-    }
   },
 })
