@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Products from "./components/Products/Products";
@@ -30,7 +30,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/ShopMe_Ecommerce">
+    <HashRouter>
       <CartProvider>
         <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white duration-200">
           <Navbar handleOrderPopup={handleOrderPopup} />
@@ -50,7 +50,7 @@ const App = () => {
           <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
         </div>
       </CartProvider>
-    </Router>
+    </HashRouter>
   );
 };
 
